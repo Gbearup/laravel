@@ -9,6 +9,10 @@
     <p>
         <a href="./f1">1F</a>
     </p>
+   <?php
+      dd($data);
+   ?>
+
 
     <p>
         <a href="./f2">2F</a>

@@ -24,8 +24,16 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {   
-    
-    return view('index');
+
+    $data = [
+        's1'=>'amy',
+        's2'=>'bob',
+        's3'=>'cat'
+    ];
+
+    return view('index',['data' => $data]);
+
+    // return view('index',['data'=>'12345']);
 
     // echo "Hello route";
 });
@@ -47,6 +55,12 @@ Route::get('f3', function () {
     
     return view('f3');
 
+});
+
+Route::get('/user/{id}', function (string $id) {
+    // return 'User '.$id;
+    // dd($id);
+    return view('index',['data' => $id]);
 });
 
 
